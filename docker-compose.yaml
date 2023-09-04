@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  webapp:
+    image: node:19-alpine3.15
+    container_name: your_art
+    working_dir: "/frontend"
+    volumes:
+      - ./:/frontend
+    command: "sh -c 'yarn install && yarn run dev'"
+    # command: "sh -c 'sleep infinity'"
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    environment:
+      HOST: 0.0.0.0
