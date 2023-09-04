@@ -14,7 +14,9 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({ breadcrumbs }) => {
           >
             {breadcrumb}
           </p>
-          {index !== breadcrumbs.length - 1 && <p>{'>'}</p>}
+          {index !== breadcrumbs.length - 1 && (
+            <p className="text-gray-500">{'>'}</p>
+          )}
         </div>
       ))}
     </div>

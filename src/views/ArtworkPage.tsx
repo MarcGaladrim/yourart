@@ -21,7 +21,7 @@ const ArtworkPage: FC = () => {
   const breadcrumbs = [
     'home',
     'painting',
-    `${artwork.artistShort.country} Artworks`,
+    'Madeleine Eister Artworks',
     artwork.title,
   ];
 
