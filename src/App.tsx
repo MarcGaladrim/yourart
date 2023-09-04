@@ -14,7 +14,8 @@ const App: FC = () => {
           <Routes>
             <Route path="/" element={<Navigate to="/artwork/0" />} />
             <Route path="/artwork/:id" element={<ArtworkPage />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" />} />
           </Routes>
         </MantineProvider>
       </QueryClientProvider>
