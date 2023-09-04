@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
-import Index from '~/views/Index';
+import ArtworkPage from '~/views/ArtworkPage';
 import NotFound from '~/views/NotFound';
 
 const App: FC = () => {
@@ -9,7 +9,8 @@ const App: FC = () => {
     <BrowserRouter>
       <MantineProvider theme={{}}>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Navigate to="/artwork/0" />} />
+          <Route path="/artwork/:id" element={<ArtworkPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MantineProvider>
