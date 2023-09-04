@@ -18,6 +18,7 @@ module.exports = {
     },
   },
   extends: [
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
