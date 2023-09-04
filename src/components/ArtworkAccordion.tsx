@@ -15,13 +15,13 @@ const ArtworkAccordion: FC<ArtworkAccordionProps> = ({ artwork }) => {
   ] as const;
 
   return (
-    <Accordion defaultValue="Description">
-      <Accordion.Item value="Description">
+    <Accordion>
+      <Accordion.Item value="description">
         <Accordion.Control className="uppercase">Description</Accordion.Control>
         <Accordion.Panel>{artwork.description}</Accordion.Panel>
       </Accordion.Item>
 
-      <Accordion.Item value="Subject">
+      <Accordion.Item value="subject">
         <Accordion.Control className="uppercase">
           Subject, Medium, Style, Materials
         </Accordion.Control>
