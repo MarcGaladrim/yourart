@@ -85,7 +85,7 @@ const OrderArtwork: FC<OrderArtworkProps> = ({ artwork }) => {
         center
       />
 
-      <p>
+      <p className="font-medium">
         In order to obtain an accurate delivery fee, please enter your country
         of residence and zip code:
       </p>
