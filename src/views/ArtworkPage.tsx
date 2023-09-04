@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import useArtwork from '~/api/artworks/getArtwork.api';
 import Breadcrumbs from '~/components/Breadcrumbs';
+import OrderArtwork from '~/components/OrderArtwork';
 
 const ArtworkPage: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,6 +28,13 @@ const ArtworkPage: FC = () => {
   return (
     <div className="flex flex-col gap-y-4 p-7">
       <Breadcrumbs breadcrumbs={breadcrumbs} />
+      <div className="flex flex-row gap-x-7">
+        <div className="flex-[2]">Artwork details</div>
+
+        <div className="flex-1">
+          <OrderArtwork artwork={artwork} />
+        </div>
+      </div>
       <p className="absolute bottom-0 right-0">
         {Object.entries(restArtwork).map(([key, value]) => (
           <p key={key}>
